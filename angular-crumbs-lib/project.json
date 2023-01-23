@@ -1,0 +1,44 @@
+{
+  "name": "angular-crumbs-lib",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "angular-crumbs-lib/src",
+  "prefix": "angular-crumbs",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "angular-crumbs-lib/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "angular-crumbs-lib/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "angular-crumbs-lib/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "angular-crumbs-lib/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "angular-crumbs-lib/**/*.ts",
+          "angular-crumbs-lib/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
