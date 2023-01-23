@@ -1,53 +1,56 @@
 {
   "name": "angular-crumbs",
-  "version": "3.0.1",
-  "description": "A route-based Angular breadcrumb component and service. Allows breadcrumb descriptions to be set based on route data, or as the result of an API call.",
-  "main": "index.js",
-  "files": [
-    "style.css"
-  ],
-  "scripts": {
-    "lint": "tslint \"src/**/*.ts\" --project tsconfig.json --type-check",
-    "clean": "rimraf .tmp && rimraf dist",
-    "transpile": "ngc",
-    "package": "rollup -c",
-    "minify": "uglifyjs dist/bundles/angular-crumbs.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/angular-crumbs.umd.min.js",
-    "copy": "cpx \"./package-dist.json\" dist && cpx \"./README.md\" dist && cpx \"./style.css\" dist && renamer --find \"package-dist.json\" --replace \"package.json\" ./dist/*",
-    "build": "npm run clean && npm run transpile && npm run package && npm run minify && npm run copy"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/emilol/angular-crumbs.git"
-  },
-  "keywords": [
-    "angular",
-    "angular2",
-    "breadcrumb"
-  ],
-  "author": "Emily Taylor",
+  "version": "0.0.0",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/emilol/angular-crumbs/issues"
+  "scripts": {
+    "start": "nx serve",
+    "build": "nx build",
+    "test": "nx test"
   },
-  "homepage": "https://github.com/emilol/angular-crumbs#readme",
+  "private": true,
   "dependencies": {
-    "@angular/common": "^4.2.4",
-    "@angular/core": "^4.2.4",
-    "@angular/platform-browser": "^4.2.4",
-    "@angular/router": "^4.2.4",
-    "rxjs": "^5.0.3",
-    "zone.js": "^0.8.12"
+    "@angular/animations": "~15.1.0",
+    "@angular/common": "~15.1.0",
+    "@angular/compiler": "~15.1.0",
+    "@angular/core": "~15.1.0",
+    "@angular/forms": "~15.1.0",
+    "@angular/platform-browser": "~15.1.0",
+    "@angular/platform-browser-dynamic": "~15.1.0",
+    "@angular/router": "~15.1.0",
+    "@nrwl/angular": "15.5.3",
+    "rxjs": "~7.5.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular/compiler": "^4.2.4",
-    "@angular/compiler-cli": "^4.2.4",
-    "codelyzer": "^3.1.1",
-    "cpx": "^1.5.0",
-    "renamer": "^0.6.1",
-    "rimraf": "^2.5.4",
-    "rollup": "^0.43.0",
-    "tslint": "^5.4.3",
-    "typescript": "^2.4.1",
-    "uglify-js": "^3.0.20"
+    "@angular-devkit/build-angular": "~15.1.0",
+    "@angular-eslint/eslint-plugin": "~15.0.0",
+    "@angular-eslint/eslint-plugin-template": "~15.0.0",
+    "@angular-eslint/template-parser": "~15.0.0",
+    "@angular/cli": "~15.1.0",
+    "@angular/compiler-cli": "~15.1.0",
+    "@angular/language-service": "~15.1.0",
+    "@nrwl/cypress": "15.5.3",
+    "@nrwl/eslint-plugin-nx": "15.5.3",
+    "@nrwl/jest": "15.5.3",
+    "@nrwl/linter": "15.5.3",
+    "@nrwl/nx-cloud": "latest",
+    "@nrwl/workspace": "15.5.3",
+    "@types/jest": "28.1.1",
+    "@types/node": "16.11.7",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "cypress": "^12.2.0",
+    "eslint": "~8.15.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-cypress": "^2.10.3",
+    "jest": "28.1.1",
+    "jest-environment-jsdom": "28.1.1",
+    "jest-preset-angular": "~12.2.3",
+    "nx": "15.5.3",
+    "prettier": "^2.6.2",
+    "ts-jest": "28.0.5",
+    "ts-node": "10.9.1",
+    "typescript": "~4.8.2"
   }
 }

@@ -1,37 +1,45 @@
 {
-	"compilerOptions": {
-		"baseUrl": "",
-		"declaration": true,
-		"stripInternal": true,
-		"experimentalDecorators": true,
-		"strictNullChecks": true,
-		"noImplicitAny": true,
-		"module": "es2015",
-		"moduleResolution": "node",
-		"paths": {
-			"@angular/*": [
-				"node_modules/@angular/*"
-			],
-			"rxjs/*": [
-				"node_modules/rxjs/*"
-			]
-		},
-		"rootDir": "src",
-		"outDir": "dist",
-		"sourceMap": true,
-		"inlineSources": true,
-		"target": "es5",
-		"skipLibCheck": true,
-		"lib": [
-			"es2015",
-			"dom"
-		]
-	},
-	"files": [
-		"./src/index.ts"
-	],
-	"angularCompilerOptions": {
-		"strictMetadataEmit": true,
-		"genDir": ".tmp"
-	}
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2022",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "useDefineForClassFields": false,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./tsconfig.editor.json"
+    }
+  ],
+  "compileOnSave": false,
+  "exclude": ["node_modules", "tmp"],
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
 }
